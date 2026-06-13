@@ -27,6 +27,10 @@ jobs:
           if [ -f cv.pdf ]; then
             cp cv.pdf _site/cv.pdf
           fi
+          if [ -f favicon.svg ]; then
+            cp favicon.svg _site/favicon.svg
+          fi
+          cp -v *.pdf _site/ 2>/dev/null || true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

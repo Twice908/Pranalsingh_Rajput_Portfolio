@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pranalsingh Rajput — #Twice · I build the tools that watch your systems</title>
+<title>Pranalsingh Rajput</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta name="description" content="Pranalsingh 'Twice' Rajput — backend & infrastructure engineer and designer. Name the technology, I'll ship your solution in it. Creator of the Pulse observability line.">
 <style>
 /* ============ Embedded fonts ============ */
@@ -121,6 +122,14 @@ html.has-cur,html.has-cur *{cursor:none!important}
 .btn-pri:hover::after{transform:translateX(3px)}
 .btn-ghost{border:1px solid var(--line);color:var(--dim)}
 .btn-ghost:hover{border-color:var(--accent);color:var(--ink)}
+.btn-cta{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;font-weight:600;border:1px solid transparent;box-shadow:0 6px 20px -8px rgba(91,140,255,.6)}
+.btn-cta:hover{transform:translateY(-2px);box-shadow:0 10px 26px -8px rgba(91,140,255,.75)}
+.btn-cta::after{content:"→";transition:transform .25s}
+.btn-cta:hover::after{transform:translateX(3px)}
+.hire-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:14px}
+.btn-hire{font-family:var(--font-mono);font-size:12px;padding:10px 16px;border-radius:999px;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);color:var(--dim);transition:transform .25s,border-color .25s,color .25s}
+.btn-hire:hover{transform:translateY(-2px);border-color:var(--ok);color:var(--ink)}
+.btn-hire span{color:var(--ok);font-weight:600}
 .hero-meta{display:flex;gap:26px;margin-top:clamp(22px,3.4vh,38px);flex-wrap:wrap}
 .hero-meta .m .k{font-family:var(--font-mono);font-size:10px;color:var(--dim);letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:5px}
 .hero-meta .m .v{font-family:var(--font-display);font-weight:600;font-size:clamp(18px,1.6vw,22px);font-variant-numeric:tabular-nums}
@@ -355,7 +364,12 @@ html.has-cur,html.has-cur *{cursor:none!important}
       <p class="hero-sub"><strong>Pranalsingh Rajput</strong> — known as <strong class="acc">#Twice</strong>. I design and ship developer infrastructure: observability, rate limiting, drift detection and agent tracing. Name the technology — I'll build your solution in it.</p>
       <div class="hero-cta">
         <a class="btn btn-pri" href="#work" data-cur="hover">See the Pulse line</a>
-        <a class="btn btn-ghost" id="wa-cta" href="https://wa.me/917218719013?text=Hey%20Twice!%20%F0%9F%91%8B%0A%0AI%20came%20across%20your%20portfolio%20and%20I%27d%20love%20to%20talk%20about%20a%20project.%20Here%27s%20what%20I%27m%20building%3A%0A%0A%E2%80%A2%20Project%2Fidea%3A%20%0A%E2%80%A2%20Tech%20stack%20(or%20%22you%20pick%22)%3A%20%0A%E2%80%A2%20Rough%20timeline%3A%20%0A%0ALooking%20forward%20to%20hearing%20from%20you!" target="_blank" rel="noopener noreferrer" data-cur="hover">Start a project</a>
+        <a class="btn btn-cta" id="wa-cta" href="https://wa.me/917218719013?text=Hey%20Twice!%20%F0%9F%91%8B%0A%0AI%20came%20across%20your%20portfolio%20and%20I%27d%20love%20to%20talk%20about%20a%20project.%20Here%27s%20what%20I%27m%20building%3A%0A%0A%E2%80%A2%20Project%2Fidea%3A%20%0A%E2%80%A2%20Tech%20stack%20(or%20%22you%20pick%22)%3A%20%0A%E2%80%A2%20Rough%20timeline%3A%20%0A%0ALooking%20forward%20to%20hearing%20from%20you!" target="_blank" rel="noopener noreferrer" data-cur="hover">Start a project</a>
+      </div>
+      <div class="hire-row">
+        <a class="btn-hire" href="pranalsingh-rajput-uiux-resume.pdf" download data-cur="hover"><span>+</span> Hire a UI/UX designer/developer</a>
+        <a class="btn-hire" href="pranalsingh-rajput-tech-resume.pdf" download data-cur="hover"><span>+</span> Hire a Web/App designer/developer</a>
+        <a class="btn-hire" href="pranalsingh-rajput-teacher-resume.pdf" download data-cur="hover"><span>+</span> Hire a Teacher</a>
       </div>
       <div class="hero-meta">
         <div class="m"><span class="k">Shipped products</span><span class="v" data-count="4">0</span></div>
@@ -976,6 +990,7 @@ function initGsap(){
     .from('.hero h1 .l > span',{yPercent:115,duration:1,stagger:.1,ease:'power4.out'},'-=.3')
     .from('.hero-sub',{y:18,opacity:0,duration:.7},'-=.5')
     .from('.hero-cta > *',{y:14,opacity:0,duration:.5,stagger:.08},'-=.5')
+    .from('.hire-row > *',{y:12,opacity:0,duration:.4,stagger:.06},'-=.4')
     .from('.hero-meta .m',{y:16,opacity:0,duration:.5,stagger:.08},'-=.4');
 
   document.querySelectorAll('.hero-meta .v[data-count]').forEach(function(el){
