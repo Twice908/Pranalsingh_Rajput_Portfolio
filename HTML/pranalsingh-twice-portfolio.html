@@ -191,6 +191,15 @@ html.has-cur,html.has-cur *{cursor:none!important}
 .prod p strong{color:var(--ink);font-weight:600}
 .prod-tags{display:flex;gap:8px;flex-wrap:wrap}
 .prod-tags span{font-family:var(--font-mono);font-size:10px;color:var(--dim);border:1px solid var(--line);border-radius:999px;padding:5px 11px}
+.ext-preview{display:flex;flex-direction:column}
+.ext-row{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;font-family:var(--font-mono);font-size:12px;padding:13px 0;border-bottom:1px solid var(--line-soft)}
+.ext-row:last-child{border-bottom:none}
+.ext-row .k{color:var(--dim);flex-shrink:0}
+.ext-row .v{color:var(--ink);text-align:right}
+.ext-visit{width:auto;margin-top:18px;font-size:12px;padding:10px 16px}
+.ext-visit::after{content:"→";transition:transform .25s}
+.ext-visit:hover{border-color:var(--pc,var(--accent));color:var(--pc,var(--accent))}
+.ext-visit:hover::after{transform:translateX(3px)}
 .prod-vis{border:1px solid var(--line-soft);border-radius:12px;background:var(--bg-2);min-height:260px;position:relative;overflow:hidden}
 .vis-bar{display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid var(--line-soft);font-family:var(--font-mono);font-size:10px;color:var(--dim)}
 .vis-bar .dot{width:6px;height:6px;border-radius:50%;background:var(--pc,var(--accent))}
@@ -496,6 +505,61 @@ html.has-cur,html.has-cur *{cursor:none!important}
     </div>
   </section>
 
+  <!-- ===== LIVE PROJECTS — external builds ===== -->
+  <section class="sec" id="live-projects" aria-label="Live projects for clients">
+    <div class="sec-head reveal">
+      <span class="tag">Outside the Pulse line · shipped for others</span>
+      <h2>Live projects, out in the wild.</h2>
+      <p>Not everything I build wears the Pulse badge. These are recent design-and-build engagements running live for real users — an AI-driven education platform and a UI/UX portfolio for an audio-software designer.</p>
+    </div>
+
+    <div class="products">
+      <article class="prod" style="--pc:var(--accent)" data-cur="view">
+        <div class="prod-meta">
+          <div class="prod-head"><span class="prod-id">EXT-01</span><span class="prod-status"><i></i>Live · in production</span></div>
+          <h3>Math ma'am <b>Academy</b></h3>
+          <div class="tagline">Offline classroom academy, AI-powered · Pune, India</div>
+          <p>An academy for students from <strong>1st to 12th standard</strong> — offline classroom batches at their Pune campus, backed by AI-personalized lesson paths, instant feedback and progress tracking, with dedicated tracks for <strong>olympiad and scholarship-exam prep</strong> plus foreign-language courses (Japanese, French, German). Designed and built end to end: brand, enrollment flow and course catalog, live for real students.</p>
+          <div class="prod-tags"><span>Offline classroom batches</span><span>AI-personalized learning</span><span>All subjects · Std 1–12</span><span>Olympiad &amp; scholarship prep</span><span>Foreign languages</span></div>
+        </div>
+        <div class="prod-vis">
+          <div class="vis-bar"><span class="dot"></span>mathmaam.com<span class="right ok">● live</span></div>
+          <div class="vis-body">
+            <div class="ext-preview">
+              <div class="ext-row"><span class="k">Mode</span><span class="v">Offline campus + AI-powered online</span></div>
+              <div class="ext-row"><span class="k">Coverage</span><span class="v">All subjects · Std 1–12</span></div>
+              <div class="ext-row"><span class="k">Programs</span><span class="v">Olympiad, scholarship &amp; language tracks</span></div>
+              <div class="ext-row"><span class="k">Based</span><span class="v">Pune, Maharashtra</span></div>
+            </div>
+            <a class="btn btn-ghost ext-visit" href="https://mathmaam.com" target="_blank" rel="noopener noreferrer" data-cur="hover">Open mathmaam.com</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="prod" style="--pc:var(--accent-2)" data-cur="view">
+        <div class="prod-meta">
+          <div class="prod-head"><span class="prod-id">EXT-02</span><span class="prod-status"><i></i>Live · case study</span></div>
+          <h3>Mira Vask <b>Folio</b></h3>
+          <div class="tagline">"Interfaces you can hear." — UI/UX portfolio for sound-tool design</div>
+          <p>A full portfolio build for an independent audio-software interface designer — case studies for a modular synth (<strong>Voltlab</strong>), a mobile recorder (<strong>Pocket Tape</strong>), a hardware companion app (<strong>Hela OS-2</strong>) and a generative player (<strong>Drift</strong>), wrapped around a cursor-reactive waveform and a three-phase "Listen → Shape → Ship" process.</p>
+          <div class="prod-tags"><span>Synth &amp; DAW UI</span><span>Design systems</span><span>Motion &amp; micro-interaction</span><span>Case-study writing</span></div>
+        </div>
+        <div class="prod-vis">
+          <div class="vis-bar"><span class="dot"></span>mira-vask-folio<span class="right ok">● live</span></div>
+          <div class="vis-body">
+            <div class="ext-preview">
+              <div class="ext-row"><span class="k">Focus</span><span class="v">Synth, DAW &amp; hardware UI</span></div>
+              <div class="ext-row"><span class="k">Process</span><span class="v">Listen → Shape → Ship</span></div>
+              <div class="ext-row"><span class="k">Projects</span><span class="v">Voltlab · Pocket Tape · Hela OS-2 · Drift</span></div>
+              <div class="ext-row"><span class="k">Based</span><span class="v">Helsinki, Finland</span></div>
+            </div>
+            <a class="btn btn-ghost ext-visit" href="https://twice908.github.io/mira-vask-folio/" target="_blank" rel="noopener noreferrer" data-cur="hover">Open mira-vask-folio</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <!-- ===== TECH — "name it, we ship it" ===== -->
   <section class="sec tech" id="tech" aria-label="Technologies">
     <div class="tech-claim reveal">
@@ -669,13 +733,13 @@ function initCursor(){
   if(!FINE||RM) return;
   document.documentElement.classList.add('has-cur');
   var dot=document.querySelector('.cur'),ring=document.querySelector('.cur-r'),lbl=document.getElementById('cur-lbl');
-  var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my,dx=mx,dy=my;
+  var mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my,dx=mx,dy=my,rs=1;
   window.addEventListener('pointermove',function(e){mx=e.clientX;my=e.clientY;},{passive:true});
   (function loop(){
     dx+=(mx-dx)*0.35; dy+=(my-dy)*0.35;
     rx+=(mx-rx)*0.16; ry+=(my-ry)*0.16;
     dot.style.transform='translate('+dx+'px,'+dy+'px) translate(-50%,-50%)';
-    ring.style.transform='translate('+rx+'px,'+ry+'px) translate(-50%,-50%)';
+    ring.style.transform='translate('+rx+'px,'+ry+'px) translate(-50%,-50%) scale('+rs+')';
     requestAnimationFrame(loop);
   })();
   function bind(el){
@@ -689,8 +753,8 @@ function initCursor(){
     el.addEventListener('pointerleave',function(){ring.classList.remove('hover','view','drag');});
   }
   document.querySelectorAll('[data-cur]').forEach(bind);
-  window.addEventListener('pointerdown',function(){ring.style.scale='0.85';});
-  window.addEventListener('pointerup',function(){ring.style.scale='1';});
+  window.addEventListener('pointerdown',function(){rs=0.85;});
+  window.addEventListener('pointerup',function(){rs=1;});
 }
 
 /* ========== HERO WebGL signal field (flowing shader) ========== */
@@ -902,14 +966,27 @@ function initVignettes(){
   var MAX=10,tokens=10,dotEls=[];
   for(var d=0;d<20;d++){var el=document.createElement('i');rlDots.appendChild(el);dotEls.push(el);}
   var ptr=0;
-  setInterval(function(){
+  function rlTick(){
     if(RM)return;
     if(tokens<MAX&&Math.random()<0.5)tokens=Math.min(MAX,tokens+1);
     var ok=tokens>0;if(ok)tokens--;
     dotEls[ptr%dotEls.length].className=ok?'pass':'block';ptr++;
     dotEls[(ptr+1)%dotEls.length].className='';
     rlCount.textContent=tokens;rlFill.style.height=(tokens/MAX*100)+'%';
-  },700);
+  }
+  var rlStarted=false;
+  function startRl(){
+    if(rlStarted)return;rlStarted=true;
+    setInterval(rlTick,700);
+  }
+  if('IntersectionObserver' in window){
+    var rlObs=new IntersectionObserver(function(entries){
+      if(entries[0].isIntersecting){startRl();rlObs.disconnect();}
+    },{threshold:0.3});
+    rlObs.observe(rlCount.closest('.prod'));
+  }else{
+    startRl();
+  }
 }
 
 /* ========== Footer interactive email (GSAP) ========== */
