@@ -24,8 +24,8 @@ jobs:
         run: |
           mkdir -p _site
           cp HTML/pranalsingh-twice-portfolio.html _site/index.html
-          if [ -f FavICon/favicon.svg ]; then
-            cp FavICon/favicon.svg _site/favicon.svg
+          if [ -d FavICon ]; then
+            cp -v FavICon/favicon.svg FavICon/favicon.ico FavICon/favicon-32x32.png FavICon/favicon-16x16.png FavICon/apple-touch-icon.png _site/ 2>/dev/null || true
           fi
           if [ -d docs ]; then
             cp -v docs/*.pdf _site/ 2>/dev/null || true
