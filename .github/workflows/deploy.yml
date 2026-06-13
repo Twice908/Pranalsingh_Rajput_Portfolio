@@ -23,14 +23,13 @@ jobs:
       - name: Prepare site output
         run: |
           mkdir -p _site
-          cp pranalsingh-twice-portfolio.html _site/index.html
-          if [ -f cv.pdf ]; then
-            cp cv.pdf _site/cv.pdf
+          cp HTML/pranalsingh-twice-portfolio.html _site/index.html
+          if [ -f FavICon/favicon.svg ]; then
+            cp FavICon/favicon.svg _site/favicon.svg
           fi
-          if [ -f favicon.svg ]; then
-            cp favicon.svg _site/favicon.svg
+          if [ -d docs ]; then
+            cp -v docs/*.pdf _site/ 2>/dev/null || true
           fi
-          cp -v *.pdf _site/ 2>/dev/null || true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
